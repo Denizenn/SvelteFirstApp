@@ -50,6 +50,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"marked": "^14.1.3",
 		"svelte-icons": "^2.1.0"
 	}
 }

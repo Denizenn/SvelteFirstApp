@@ -60,3 +60,12 @@ export const flyAndScale = (
 		easing: cubicOut
 	};
 };
+
+export async function getRandomNumber() {
+    // Simulate a delay (e.g., network latency)
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    // Return a random number between 0 and 100
+    const randomNum = Math.floor(Math.random() * 101); // Random number between 0 and 100
+    return randomNum.toString();
+}
