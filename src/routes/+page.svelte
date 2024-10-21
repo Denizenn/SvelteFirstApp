@@ -73,7 +73,9 @@
 	import Bindings from './Bindings.svelte';
 	import Lifecycle from './Lifecycle.svelte';
 	import StoreShopping from './StoreShopping.svelte';
-
+	import ProgressBar from './ProgressBar.svelte';
+	import Spring from './Spring.svelte';
+	import Transitions from './Transitions.svelte';
 	
 
 </script>
@@ -147,3 +149,7 @@
 <Bindings />
 <Lifecycle />
 <StoreShopping />
+<ProgressBar />
+<Spring />
+<div ></div>
+<Transitions />
