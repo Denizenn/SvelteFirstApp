@@ -1,6 +1,7 @@
 <script lang="ts">
 
 	import Inner from './Inner.svelte';
+	import SearchBar from './SearchBar.svelte';
 
 	function handleMessage(event: CustomEvent) {
 		alert(event.detail.text);
@@ -15,8 +16,8 @@
     $: doubled = count * 2;
 
     $: {
-		console.log(`the count is ${count}`);
-		console.log(`this will also be logged whenever count changes`);
+		// console.log(`the count is ${count}`);
+		// console.log(`this will also be logged whenever count changes`);
 	}
 
     $: if (count >= 10) {
@@ -76,6 +77,9 @@
 	import ProgressBar from './ProgressBar.svelte';
 	import Spring from './Spring.svelte';
 	import Transitions from './Transitions.svelte';
+	import AdvancedBindings from './AdvancedBindings.svelte';
+	import Card from './Card.svelte';
+	import Box from './Box.svelte';
 	
 
 </script>
@@ -83,6 +87,9 @@
 
 
 <h1>Welcome to {name.toUpperCase()}</h1>
+<div class="search">
+	<SearchBar />
+</div>
 <Inner on:message={handleMessage} />
 
 <p>{@html string}</p>
@@ -147,9 +154,22 @@
 
 <PointerMove />
 <Bindings />
-<Lifecycle />
+<!-- <Lifecycle /> -->
 <StoreShopping />
 <ProgressBar />
-<Spring />
+<!-- <Spring /> -->
 <div ></div>
-<Transitions />
+<!-- <Transitions /> -->
+<AdvancedBindings />
+<Card />
+
+<div class="boxes">
+	<Box --color="red" />
+	<Box --color="green" />
+	<Box --color="blue" />
+</div>
+
+
+<style>
+
+</style>
