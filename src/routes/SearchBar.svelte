@@ -10,6 +10,8 @@
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 	import { faCircleXmark } from '@fortawesome/pro-solid-svg-icons';
 
+    // 
+
 	const fakeData = [
 		'Introduction to auto Biology',
 		'Human auto Anatomy 101',
@@ -126,7 +128,7 @@
 			{:else}
 				<Command.Group heading="Search Results">
 					{#each results as result}
-						<Command.Item tabindex={0} class="bg-red-20 hover:bg-violet-600 focus:bg-blue-500"
+						<Command.Item tabindex={0} class="custom-item bg-red-200 hover:bg-teal-600 focus:bg-teal-600"
 							>{result}</Command.Item
 						>
 					{/each}
@@ -136,5 +138,3 @@
 	</Command.Dialog>
 </div>
 
-<style>
-</style>
