@@ -173,12 +173,14 @@
 				placeholder="Type a command or search..."
 				on:input={handleSearchInput}
 				bind:value={searchText}
+				tabindex={1}
                 handleKeydownAction={(e) => handleKeydownAction(e, performSearch)}
 			>
 				<Button
 					on:click={handleClear}
 					class="ml-2"
 					variant="ghost"
+					tabindex={1}
 					on:keydown={(e) => handleKeydownAction(e as unknown as KeyboardEvent, handleClear)}
 				>
 					<FontAwesomeIcon icon={faCircleXmark} class="h-5 w-5" />
@@ -188,6 +190,7 @@
 			<div class=" h-full flex justify-center">
 				<button
 					on:click={performSearch}
+					tabindex={1}
                     on:keydown={(e) => handleKeydownAction(e as unknown as KeyboardEvent, handleClear)}
 					class="bg-white cursor-pointer my-4 mr-4 ml-2 rounded-lg px-6 py-1 font-semibold">Cancel</button
 				>
@@ -200,7 +203,7 @@
 							<span class="text-xs">
 								RECENT SEARCH
 							</span>
-							<button tabindex={0} class="command.item recent-item text-sm focus:ring">Biology of human body</button>
+							<button tabindex={2} class="recent-item text-sm">Biology of human body</button>
 						</div>
 
 					<!-- <Command.Separator class="" /> -->
@@ -209,11 +212,11 @@
 							<span class="text-xs">
 								POPULAR SEARCH
 							</span>
-						<Command.Item tabindex={0} class="command.item popular-item"><span>Human Body</span></Command.Item>
-						<Command.Item tabindex={0} class="command.item popular-item"><span>Blood cells</span></Command.Item>
-						<Command.Item tabindex={0} class="command.item popular-item"><span>Skeleton</span></Command.Item>
-						<Command.Item tabindex={0} class="command.item popular-item"><span>Human heart - animation</span></Command.Item>
-						<Command.Item tabindex={0} class="command.item popular-item"><span>Influenza (flu) virion</span></Command.Item>
+						<Command.Item tabindex={3} class="popular-item"><span>Human Body</span></Command.Item>
+						<Command.Item tabindex={3} class="popular-item"><span>Blood cells</span></Command.Item>
+						<Command.Item tabindex={3} class="popular-item"><span>Skeleton</span></Command.Item>
+						<Command.Item tabindex={3} class="popular-item"><span>Human heart - animation</span></Command.Item>
+						<Command.Item tabindex={3} class="popular-item"><span>Influenza (flu) virion</span></Command.Item>
 						</div>
 					</div>
 					<!-- <Separator orientation="vertical" class=""/> -->
@@ -226,8 +229,8 @@
 						<ScrollArea>
 						{#each results as result}
 							<Command.Item
-							tabindex={0}
-							class="command-item search-item hover:bg-teal-600 focus:bg-teal-600" 
+							tabindex={1}
+							class="search-item hover:bg-teal-600 focus:bg-teal-600" 
 							>
 							{result}
 							</Command.Item>

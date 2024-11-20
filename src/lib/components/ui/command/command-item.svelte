@@ -2,7 +2,6 @@
 	import { Command as CommandPrimitive } from "cmdk-sv";
 	import { cn } from "$lib/utils.js";
 
-	type $$Props = CommandPrimitive.ItemProps;
 
 	export let asChild = false;
 
@@ -13,7 +12,7 @@
 <CommandPrimitive.Item
 	{asChild}
 	class={cn(
-		"relative flex cursor-default select-none items-center rounded-sm  py-1.5 text-sm  data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+		"aria-selected:text-accent-foreground relative flex cursor-default select-none items-center rounded-sm  py-1.5 text-sm  data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 		className
 	)}
 	{...$$restProps}
@@ -22,5 +21,4 @@
 >
 	<slot {action} {attrs} />
 </CommandPrimitive.Item>
-<!-- aria-selected:bg-accent aria-selected:text-accent-foreground outline-none -->
 
