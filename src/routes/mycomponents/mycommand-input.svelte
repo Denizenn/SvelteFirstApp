@@ -15,7 +15,7 @@
 
 </script>
 
-<div class="flex items-center w-full bg-gray-600">
+<div class="flex items-center w-full ">
     <div class="flex items-center w-full bg-white rounded-lg m-4 ">
         <Search class="ml-4 mr-2 w-8 h-8" />
         <CommandPrimitive.Input

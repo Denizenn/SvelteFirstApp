@@ -1,5 +1,5 @@
 <script lang="ts">
-	const emojis : { [key: string]: string } = {
+	let emojis : { [key: string]: string } = {
 		apple: ' 🍎',
 		banana: '🍌',
 		carrot: '🥕',
@@ -8,7 +8,8 @@
 	};
 
 	// the name is updated whenever the prop value changes...
-	export let name;
+	let { name } = $props();
+
 
 	// ...but the "emoji" variable is fixed upon initialisation
 	// of the component because it uses `const` instead of `$:`
